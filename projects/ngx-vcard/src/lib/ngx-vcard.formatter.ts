@@ -157,9 +157,9 @@ export class VCardFormatter {
 
     if (vCard.photo) {
       if (isPropertyWithParameters(vCard.photo)) {
-        formattedVCardString += 'PHOTO' + propertyToVCardString(vCard.photo.param) + ':' + e(vCard.photo.value) + nl();
+        formattedVCardString += 'PHOTO' + propertyToVCardString(vCard.photo.param) + ';' + e(vCard.photo.value) + nl();
       } else {
-        formattedVCardString += 'PHOTO:' + e(vCard.photo) + nl();
+        formattedVCardString += 'PHOTO;ENCODING=b;TYPE=image/jpg:' + e(vCard.photo) + nl();
       }
     }
 
